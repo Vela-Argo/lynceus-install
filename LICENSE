@@ -1,0 +1,17 @@
+Copyright (c) Vela-Argo. All rights reserved.
+
+This software and accompanying scripts are proprietary to Vela-Argo and
+intended for use only by Vela-Argo employees and authorised contributors.
+
+Permission is NOT granted to copy, modify, distribute, sublicense, or
+otherwise make available this software outside Vela-Argo without prior
+written consent from Vela-Argo.
+
+The install scripts in this repository are made publicly accessible
+solely so that authorised users with appropriate credentials (a GitHub
+Personal Access Token with the relevant scopes for the Vela-Argo
+organisation) can bootstrap the Lynceus toolchain on their own
+machines. Reading or fetching these scripts does not confer any rights
+to the Lynceus or Argo software they install.
+
+For licensing inquiries, contact Vela-Argo.
