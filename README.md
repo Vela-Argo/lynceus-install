@@ -1,3 +1,17 @@
+ ```
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║      *         _                                                             ║
+  ║      │        | |_   _ _ __   ___ ___ _   _ ___                              ║
+  ║   ───┼───     | | | | | '_ \ / __/ _ \ | | / __|                             ║
+  ║      │        | | |_| | | | | (_|  __/ |_| \__ \                             ║
+  ║   ───┼───     |_|\__, |_| |_|\___\___|\__,_|___/                             ║
+  ║      │           |___/                                                       ║
+  ║   ───┼───                                                                    ║
+  ║      │        ARGO agentic SDLC harness · v0.1.0                             ║
+  ║      ▼                                                                       ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
+  ```
+
 # Lynceus — install scripts
 
 This repository hosts the public install scripts for **Lynceus**, the opinionated [Pi](https://pi.dev) configuration used at Vela-Argo for agentic SDLC work.
