@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install.sh — Lynceus + Pi + argo-cli installer for macOS / Linux.
+# install.sh -- Lynceus + Pi + argo-cli installer for macOS / Linux.
 #
 # Installs in order:
 #   1. Pi (Earendil-works' coding-agent CLI)
@@ -34,7 +34,7 @@ GH_PACKAGES_URL="https://npm.pkg.github.com"
 VELA_ARGO_SCOPE="@vela-argo"
 
 # ── 1. Prereqs ────────────────────────────────────────────────────────
-say "Checking prerequisites…"
+say "Checking prerequisites..."
 
 if ! command -v node >/dev/null 2>&1; then
   fail "Node.js is required but not on PATH. Install Node 20+ from https://nodejs.org"
@@ -47,13 +47,13 @@ fi
 ok "Node v$NODE_VERSION"
 
 if ! command -v npm >/dev/null 2>&1; then
-  fail "npm is required but not on PATH (ships with Node — unusual state)."
+  fail "npm is required but not on PATH (ships with Node -- unusual state)."
 fi
 ok "npm $(npm --version)"
 
 # ── 2. GitHub Packages auth ──────────────────────────────────────────
 NPMRC="$HOME/.npmrc"
-say "Checking GitHub Packages auth in $NPMRC…"
+say "Checking GitHub Packages auth in $NPMRC..."
 
 if [ -f "$NPMRC" ] && grep -q "${VELA_ARGO_SCOPE}:registry" "$NPMRC"; then
   ok "@vela-argo registry already configured in $NPMRC"
@@ -96,7 +96,7 @@ else
 fi
 
 # ── 3. Install Pi ────────────────────────────────────────────────────
-say "Installing Pi ($PI_PACKAGE)…"
+say "Installing Pi ($PI_PACKAGE)..."
 # --ignore-scripts is the recommended install method per pi.dev docs.
 npm install -g --ignore-scripts "$PI_PACKAGE"
 ok "Pi installed"
@@ -108,7 +108,7 @@ else
 fi
 
 # ── 4. Install @vela-argo/cli ────────────────────────────────────────
-say "Installing $ARGO_PACKAGE…"
+say "Installing $ARGO_PACKAGE..."
 npm install -g "$ARGO_PACKAGE"
 ok "argo CLI installed"
 
@@ -119,9 +119,9 @@ else
 fi
 
 # ── 5. Install Lynceus into Pi ───────────────────────────────────────
-say "Installing $LYNCEUS_PACKAGE into Pi…"
+say "Installing $LYNCEUS_PACKAGE into Pi..."
 if command -v pi >/dev/null 2>&1; then
-  pi install "npm:$LYNCEUS_PACKAGE" || warn "pi install completed with a non-zero exit — check above"
+  pi install "npm:$LYNCEUS_PACKAGE" || warn "pi install completed with a non-zero exit -- check above"
   ok "Lynceus installed into Pi"
 else
   warn "pi not on PATH yet; run \`pi install npm:$LYNCEUS_PACKAGE\` after opening a new terminal"
@@ -139,5 +139,5 @@ echo "     and boot the harness daemon for you."
 echo ""
 echo "If something didn't install cleanly:"
 echo "  - Check $NPMRC for the @vela-argo lines"
-echo "  - Try running this script again — it's idempotent"
+echo "  - Try running this script again -- it's idempotent"
 echo "  - Or install manually: npm install -g $ARGO_PACKAGE ; pi install npm:$LYNCEUS_PACKAGE"

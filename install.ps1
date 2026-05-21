@@ -1,4 +1,4 @@
-# install.ps1 — Lynceus + Pi + argo-cli installer for Windows.
+# install.ps1 -- Lynceus + Pi + argo-cli installer for Windows.
 #
 # Installs in order:
 #   1. Pi (Earendil-works' coding-agent CLI)
@@ -43,7 +43,7 @@ Ok "Node v$nodeVersionRaw"
 
 $npm = Get-Command npm -ErrorAction SilentlyContinue
 if (-not $npm) {
-    Fail "npm is required but not on PATH (ships with Node — unusual state)."
+    Fail "npm is required but not on PATH (ships with Node -- unusual state)."
 }
 Ok "npm $(& npm --version)"
 
@@ -133,7 +133,7 @@ Say "Installing $LynceusPackage into Pi..."
 if (Get-Command pi -ErrorAction SilentlyContinue) {
     & pi install "npm:$LynceusPackage"
     if ($LASTEXITCODE -ne 0) {
-        Warn "pi install exited $LASTEXITCODE — check the output above"
+        Warn "pi install exited $LASTEXITCODE -- check the output above"
     } else {
         Ok "Lynceus installed into Pi"
     }
@@ -153,5 +153,5 @@ Write-Host "     and boot the harness daemon for you."
 Write-Host ""
 Write-Host "If something didn't install cleanly:"
 Write-Host "  - Check $Npmrc for the @vela-argo lines"
-Write-Host "  - Try running this script again — it's idempotent"
+Write-Host "  - Try running this script again -- it's idempotent"
 Write-Host "  - Or install manually: npm install -g $ArgoPackage ; pi install npm:$LynceusPackage"
