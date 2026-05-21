@@ -1,0 +1,11 @@
+# Shell scripts MUST be LF. Bash on macOS/Linux treats CR as part of
+# the next token (variable names, etc.), which breaks scripts in
+# subtle, hard-to-diagnose ways. PowerShell tolerates both, but we
+# pin .ps1 to LF too for consistency.
+*.sh    text eol=lf
+*.ps1   text eol=lf
+
+# Other text files follow git's default (line-endings normalised on
+# commit, native on checkout) unless explicitly overridden.
+*.md    text
+LICENSE text
